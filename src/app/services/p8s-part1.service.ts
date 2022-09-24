@@ -140,7 +140,7 @@ export class P8sPart1Service {
     },
     {
       "start": "",
-      "end": "2:36",
+      "end": "1:36",
       "name": "Stomp Dead (4)",
       "damageType": "Physical",
       "damageActor": "Boss"

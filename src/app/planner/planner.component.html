@@ -10,7 +10,7 @@
   <div class="planner-mechanic" *ngFor="let mechanic of mechanics">
     <div>{{ mechanic.start }}</div>
     <div>{{ mechanic.end }}</div>
-    <button mat-flat-button class="mechanic-name">{{ mechanic.name }}</button>
+    <button mat-flat-button class="mechanic-name" (click)="selectMechanic(mechanic)">{{ mechanic.name }}</button>
     <div>{{ mechanic.damageType }}</div>
     <div>{{ mechanic.damageActor }}</div>
     <div class="mitigations" *ngFor="let player of players">

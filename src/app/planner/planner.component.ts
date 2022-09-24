@@ -1,14 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { P8sPart1Service } from '../mechanics/p8s-part1.service';
-
-interface IMechanic {
-  name: string;
-  start: string;
-  end: string;
-  damageType: string;
-  damageActor: string;
-  mitigations: any;
-}
+import { P8sPart1Service } from '../services/p8s-part1.service';
+import { IMechanic, MechanicsService } from '../services/mechanics.service';
 
 @Component({
   selector: 'app-planner',
@@ -20,7 +12,7 @@ export class PlannerComponent implements OnInit {
   players: string[] = ['PLD', 'DRK', 'WHM', 'SCH', 'NIN', 'SAM', 'DNC', 'SMN'];
   mechanics: IMechanic[] = [];
 
-  constructor(private p8sPart1: P8sPart1Service) { }
+  constructor(private p8sPart1: P8sPart1Service, private mechanicsService: MechanicsService) { }
 
   ngOnInit(): void {
     this.mechanics = this.p8sPart1.mechanics.map(mechanic => {
@@ -29,6 +21,10 @@ export class PlannerComponent implements OnInit {
         mitigations: {}
       }
     });
+  }
+
+  selectMechanic(mechanic: IMechanic) {
+    this.mechanicsService.setMechanic(mechanic);
   }
 
 }
