@@ -4,6 +4,9 @@
   </mat-toolbar>
   <mat-sidenav-container class="content">
     <mat-sidenav #sidenav mode="side" class="sidebar">d</mat-sidenav>
+    <mat-sidenav opened mode="side" position="end" class="sidebar">
+      <app-mechanic-form></app-mechanic-form>
+    </mat-sidenav>
     <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

@@ -1,6 +1,6 @@
 .planner {
   display: grid;
-  grid-template-columns: 50px 50px 300px 150px 150px repeat(8, 1fr);
+  grid-template-columns: 50px 50px 350px 150px 150px repeat(8, 1fr);
   grid-auto-rows: minmax(min-content, max-content);
 }
 
@@ -23,6 +23,10 @@
     align-items: center;
     padding: 5px;
   }
+}
+.mechanic-name {
+  border-radius: 0;
+  margin: 1px 0;
 }
 
 .mitigations {

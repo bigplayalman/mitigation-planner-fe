@@ -1,23 +1,22 @@
-<!-- <app-mechanic-form></app-mechanic-form> -->
 <div class="planner">
   <div class="planner-header">
-    <div class="boss-name">{{boss}}</div>
+    <div class="boss-name">{{ boss }}</div>
     <div>Type</div>
     <div>Actor</div>
     <div *ngFor="let player of players">
-      {{player}}
+      {{ player }}
     </div>
   </div>
   <div class="planner-mechanic" *ngFor="let mechanic of mechanics">
-    <div>{{mechanic.start}}</div>
-    <div>{{mechanic.end}}</div>
-    <div>{{mechanic.name}}</div>
-    <div>{{mechanic.damageType}}</div>
-    <div>{{mechanic.damageActor}}</div>
+    <div>{{ mechanic.start }}</div>
+    <div>{{ mechanic.end }}</div>
+    <button mat-flat-button class="mechanic-name">{{ mechanic.name }}</button>
+    <div>{{ mechanic.damageType }}</div>
+    <div>{{ mechanic.damageActor }}</div>
     <div class="mitigations" *ngFor="let player of players">
       <ng-container *ngIf="mechanic.mitigations?.[player]">
         <div *ngFor="let mitigation of mechanic.mitigations?.[player]">
-          {{mitigation.action}}
+          {{ mitigation.action }}
         </div>
       </ng-container>
     </div>
