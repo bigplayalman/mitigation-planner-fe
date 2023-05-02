@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { PlannerRoutingModule } from './planner-routing.module';
 import { PlannerComponent } from './planner.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PlannerComponent } from './planner.component';
   imports: [
     CommonModule,
     PlannerRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    SharedModule
   ]
 })
 export class PlannerModule { }
